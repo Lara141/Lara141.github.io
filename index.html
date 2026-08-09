@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,19 +22,25 @@
 <body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-offset="70">
 
     <!-- Barra de Navegación -->
-    <nav id="navbarMain" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav id="navbarMain" class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#inicio">Mi Portafolio</a>
+            <a class="navbar-brand texto-titulos" href="#inicio">Mi Portafolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
                     <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <!-- Botón Modo Oscuro/Claro -->
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="btn-tema" class="btn btn-outline-secondary rounded-circle btn-sm" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -46,8 +52,8 @@
             <div class="row align-items-center">
                 <div class="col-md-7 text-center text-md-start">
                     <h1 class="display-3 mb-3 fw-bold texto-destacado">Bienvenido a mi portafolio</h1>
-                    <p class="lead mb-4">Estudiante de Licenciatura en Sistemas de Información</p>
-                    <p class="mb-5">Enfocada en el desarrollo de software y el diseño de bases de datos.</p>
+                    <p class="lead mb-4 texto-normal">Estudiante de Licenciatura en Sistemas de Información</p>
+                    <p class="mb-5 texto-normal">Enfocada en el desarrollo de software y el diseño de bases de datos.</p>
                     <div class="d-grid d-md-flex justify-content-md-start gap-3">
                         <a href="#proyectos" class="btn btn-lila-primary btn-lg interactive-btn">Ver Proyectos</a>
                         <a href="#contacto" class="btn btn-lila-outline btn-lg interactive-btn">Contactar</a>
@@ -61,19 +67,19 @@
     </header>
 
     <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="section">
+    <section id="sobre-mi" class="section seccion-gris">
         <div class="container">
-            <h2 class="section-title mb-5 text-center">Sobre Mí</h2>
+            <h2 class="section-title mb-5 text-center texto-titulos">Sobre Mí</h2>
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p class="lead">Me apasiona resolver problemas lógicos y estructurar información. Disfruto trabajando tanto en el código del servidor como en el diseño de arquitecturas eficientes.</p>
+                    <p class="lead texto-normal">Me apasiona resolver problemas lógicos y estructurar información. Disfruto trabajando tanto en el código del servidor como en el diseño de arquitecturas eficientes.</p>
                 </div>
                 <div class="col-md-5">
-                    <ul class="list-group list-group-flush info-lista shadow-sm">
-                        <li class="list-group-item bg-transparent"><i class="fas fa-map-marker-alt texto-destacado me-2"></i> <strong>Ubicación:</strong> Corrientes Capital, Argentina</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-graduation-cap texto-destacado me-2"></i> <strong>Carrera:</strong> Lic. en Sistemas de Información (En curso)</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-language texto-destacado me-2"></i> <strong>Idiomas:</strong> Español (Nativo) - Inglés (Básico)</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-calendar-alt texto-destacado me-2"></i> <strong>Fecha de nacimiento:</strong> [Tu Fecha exacta] (21 años)</li>
+                    <ul class="list-group list-group-flush info-lista shadow-sm tarjeta-fondo">
+                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-map-marker-alt texto-destacado me-2"></i> <strong>Ubicación:</strong> Corrientes Capital, Argentina</li>
+                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-graduation-cap texto-destacado me-2"></i> <strong>Carrera:</strong> Lic. en Sistemas de Información (En curso)</li>
+                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-language texto-destacado me-2"></i> <strong>Idiomas:</strong> Español (Nativo) - Inglés (Básico)</li>
+                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-calendar-alt texto-destacado me-2"></i> <strong>Fecha de nacimiento:</strong> [Tu Fecha exacta] (21 años)</li>
                     </ul>
                 </div>
             </div>
@@ -84,38 +90,55 @@
     <section id="habilidades" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Habilidades</h2>
+                <h2 class="section-title texto-titulos">Habilidades</h2>
             </div>
             
-            <h4 class="mb-3 texto-destacado">Frontend</h4>
-            <div class="row row-cols-2 row-cols-md-4 g-4 mb-5">
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-html5"></i><h5 class="skill-title">HTML/CSS</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-bootstrap"></i><h5 class="skill-title">Bootstrap 5</h5></div></div>
-            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Tarjeta Frontend -->
+                <div class="col-md-4">
+                    <div class="skill-category-card">
+                        <h4 class="mb-4 texto-destacado"><i class="fas fa-laptop-code me-2"></i>Frontend</h4>
+                        <div class="skill-tags-container">
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+                            <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h4 class="mb-3 texto-destacado">Backend</h4>
-            <div class="row row-cols-2 row-cols-md-4 g-4 mb-5">
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-php"></i><h5 class="skill-title">PHP</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fas fa-hashtag"></i><h5 class="skill-title">C#</h5></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fas fa-database"></i><h5 class="skill-title">SQL Server</h5></div></div>
-            </div>
+                <!-- Tarjeta Backend -->
+                <div class="col-md-4">
+                    <div class="skill-category-card">
+                        <h4 class="mb-4 texto-destacado"><i class="fas fa-server me-2"></i>Backend</h4>
+                        <div class="skill-tags-container">
+                            <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                            <span class="skill-tag"><i class="fas fa-hashtag"></i> C#</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> SQL Server</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h4 class="mb-3 texto-destacado">Herramientas</h4>
-            <div class="row row-cols-2 row-cols-md-4 g-4">
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-github"></i><h5 class="skill-title">Git/GitHub</h5></div></div>
+                <!-- Tarjeta Herramientas -->
+                <div class="col-md-4">
+                    <div class="skill-category-card">
+                        <h4 class="mb-4 texto-destacado"><i class="fas fa-tools me-2"></i>Herramientas</h4>
+                        <div class="skill-tags-container">
+                            <span class="skill-tag"><i class="fab fa-github"></i> Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Proyectos -->
-    <section id="proyectos" class="section">
+    <section id="proyectos" class="section seccion-gris">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Proyectos</h2>
+                <h2 class="section-title texto-titulos">Proyectos</h2>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-5">
-                    <div class="project-card">
+                    <div class="project-card tarjeta-fondo">
                         
                         <!-- Carrusel de imágenes para el proyecto -->
                         <div id="carruselUnivia" class="carousel slide" data-bs-ride="carousel">
@@ -138,9 +161,9 @@
                         </div>
 
                         <div class="project-card-body">
-                            <h4 class="card-title mb-3">Univia API REST</h4>
-                            <p class="card-text mb-4 text-muted">Backend para gestionar y distribuir enlaces a recursos académicos mediante respuestas JSON.</p>
-                            <p class="project-tech">Tecnologías: PHP, MySQL, PDO</p>
+                            <h4 class="card-title mb-3 texto-titulos">Univia API REST</h4>
+                            <p class="card-text mb-4 texto-normal">Backend para gestionar y distribuir enlaces a recursos académicos mediante respuestas JSON.</p>
+                            <p class="project-tech texto-normal">Tecnologías: PHP, MySQL, PDO</p>
                             <a href="#" class="btn btn-lila-outline w-100 interactive-btn" target="_blank">Ver en GitHub</a>
                         </div>
                     </div>
@@ -153,13 +176,13 @@
     <section id="contacto" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title texto-titulos">Contacto</h2>
             </div>
             <div class="row g-5 align-items-center justify-content-center">
                 <div class="col-lg-5">
-                    <p class="mb-3"><i class="fas fa-envelope texto-destacado me-2"></i> tu@email.com</p>
-                    <p class="mb-3"><i class="fab fa-linkedin texto-destacado me-2"></i> <a href="#" class="text-decoration-none text-dark">LinkedIn</a></p>
-                    <p class="mb-4"><i class="fab fa-github texto-destacado me-2"></i> <a href="#" class="text-decoration-none text-dark">GitHub</a></p>
+                    <p class="mb-3 texto-normal"><i class="fas fa-envelope texto-destacado me-2"></i> tu@email.com</p>
+                    <p class="mb-3 texto-normal"><i class="fab fa-linkedin texto-destacado me-2"></i> <a href="#" class="text-decoration-none texto-normal">LinkedIn</a></p>
+                    <p class="mb-4 texto-normal"><i class="fab fa-github texto-destacado me-2"></i> <a href="#" class="text-decoration-none texto-normal">GitHub</a></p>
                     
                     <!-- Botón Descargar CV -->
                     <a href="ruta-a-tu-cv.pdf" download class="btn btn-lila-primary interactive-btn">
@@ -167,18 +190,28 @@
                     </a>
                 </div>
                 <div class="col-lg-5">
-                    <form id="formularioContacto" novalidate>
-                        <div class="mb-3">
+                    <form id="formularioContacto" class="needs-validation" novalidate>
+                        <div class="mb-3 position-relative">
                             <input type="text" id="nombre" class="form-control" placeholder="Tu Nombre">
+                            <div class="invalid-feedback">El nombre no puede estar vacío.</div>
+                            <div class="valid-feedback">¡Se ve bien!</div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 position-relative">
                             <input type="email" id="correo" class="form-control" placeholder="Tu Email">
+                            <div class="invalid-feedback">Por favor ingresá un correo válido (ej: hola@correo.com).</div>
+                            <div class="valid-feedback">¡Correo correcto!</div>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-4 position-relative">
                             <textarea id="mensaje" class="form-control" rows="5" placeholder="Tu Mensaje"></textarea>
+                            <div class="invalid-feedback">No te olvides de escribir tu mensaje.</div>
+                            <div class="valid-feedback">¡Mensaje listo!</div>
                         </div>
                         <div class="text-end">
                             <button type="submit" class="btn btn-lila-primary interactive-btn w-100">Enviar Mensaje</button>
+                        </div>
+                        <!-- Mensaje de éxito visual -->
+                        <div id="mensaje-exito" class="alert alert-success mt-3 d-none text-center" role="alert">
+                            <i class="fas fa-check-circle me-2"></i> ¡Mensaje enviado con éxito!
                         </div>
                     </form>
                 </div>
@@ -187,9 +220,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="text-center seccion-gris">
         <div class="container">
-            <p class="text-muted mt-3">&copy; <span id="year"></span> Mi Portafolio. Todos los derechos reservados.</p>
+            <p class="mt-3 texto-normal">&copy; <span id="year"></span> Mi Portafolio. Todos los derechos reservados.</p>
         </div>
     </footer>
 

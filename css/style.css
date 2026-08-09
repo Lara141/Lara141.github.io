@@ -1,20 +1,48 @@
+/* Variables con soporte para Tema Claro / Oscuro */
 :root {
     --bs-body-font-family: 'Inter', sans-serif;
-    --lila-claro: #E6E6FA; /* Fondo sutil */
-    --lila-principal: #C8A2C8; /* Lila pastel */
-    --lila-oscuro: #9B7E9B; /* Para hovers */
-    --light-gray: #fcfcfc; 
+    --lila-claro: #E6E6FA;
+    --lila-principal: #C8A2C8;
+    --lila-oscuro: #9B7E9B; 
+    
+    /* Variables dinámicas (Cambian según el tema) */
+    --bg-principal: #ffffff;
+    --bg-secundario: #fcfcfc;
+    --bg-tarjetas: #ffffff;
+    --texto-principal: #333333;
+    --texto-titulos: #1a1a1a;
+    --borde-tarjetas: #E6E6FA;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
 }
 
+/* Variables para Modo Oscuro */
+[data-theme="dark"] {
+    --bg-principal: #121212;
+    --bg-secundario: #1e1e1e;
+    --bg-tarjetas: #242424;
+    --texto-principal: #d4d4d4;
+    --texto-titulos: #f0f0f0;
+    --borde-tarjetas: #333333;
+    --navbar-bg: rgba(18, 18, 18, 0.95);
+    --lila-claro: #3a2b3a; /* Ajuste sutil del lila para fondo oscuro */
+}
+
+/* Estilos Globales */
 body {
-    color: #333;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
     line-height: 1.8;
     font-weight: 300;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, .navbar-brand {
+h1, h2, h3, h4, h5, .navbar-brand, .texto-titulos {
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--texto-titulos);
+}
+
+.texto-normal {
+    color: var(--texto-principal) !important;
 }
 
 .texto-destacado {
@@ -26,14 +54,24 @@ section {
     padding-bottom: 5rem;
 }
 
+.seccion-gris {
+    background-color: var(--bg-secundario);
+}
+.tarjeta-fondo {
+    background-color: var(--bg-tarjetas) !important;
+    border-color: var(--borde-tarjetas) !important;
+}
+
 /* Navegación */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--navbar-bg);
     backdrop-filter: blur(5px);
     box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
 }
 .nav-link {
     font-weight: 400;
+    color: var(--texto-principal) !important;
     transition: color 0.2s ease-in-out;
 }
 .nav-link:hover, .nav-link.active {
@@ -42,7 +80,6 @@ section {
 
 /* Héroe (Inicio) */
 .hero {
-    background-color: #fff;
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -68,7 +105,7 @@ section {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border: 10px solid #fff;
+    border: 10px solid var(--bg-principal);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
@@ -94,7 +131,7 @@ section {
 
 .btn-lila-outline {
     background-color: transparent;
-    color: #333;
+    color: var(--texto-principal);
     border: 2px solid var(--lila-principal);
     font-weight: 600;
     padding: 8px 23px;
@@ -111,50 +148,59 @@ section {
     box-shadow: 0 6px 15px rgba(200, 162, 200, 0.4);
 }
 
-/* Fondos grises alternados */
-#sobre-mi, #contacto {
-    background-color: var(--light-gray);
-}
+/* Lista Sobre Mi */
 .info-lista {
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid var(--borde-tarjetas);
 }
 
-/* Tarjetas Habilidades */
-.skill-card {
-    background: #fff;
-    border: 1px solid var(--lila-claro);
+/* NUEVAS Tarjetas de Habilidades (Estilo Etiquetas/Tags) */
+.skill-category-card {
+    background-color: var(--bg-tarjetas);
+    border: 1px solid var(--borde-tarjetas);
     border-radius: 15px;
-    padding: 1.5rem;
-    text-align: center;
+    padding: 2rem;
     height: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
     transition: all 0.3s ease-in-out;
 }
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(200, 162, 200, 0.15);
+.skill-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(200, 162, 200, 0.1);
     border-color: var(--lila-principal);
 }
-.skill-icon {
-    font-size: 2.5rem;
-    color: var(--lila-principal);
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+.skill-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.skill-card:hover .skill-icon {
-    transform: scale(1.2);
-}
-.skill-title {
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--lila-claro);
+    color: var(--texto-titulos);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 0;
-    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+.skill-tag i {
+    margin-right: 8px;
+    color: var(--lila-oscuro);
+}
+.skill-tag:hover {
+    background-color: var(--lila-principal);
+    color: #fff;
+}
+.skill-tag:hover i {
+    color: #fff;
 }
 
 /* Tarjetas Proyectos */
 .project-card {
-    background: #fff;
-    border: 1px solid var(--lila-claro);
+    border: 1px solid var(--borde-tarjetas);
     border-radius: 15px;
     overflow: hidden;
     height: 100%;
@@ -162,7 +208,7 @@ section {
     transition: all 0.3s ease-in-out;
 }
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(200, 162, 200, 0.2);
 }
 .project-card img {
@@ -172,29 +218,40 @@ section {
 .project-card-body {
     padding: 2rem;
 }
-.project-tech {
-    font-size: 0.8rem;
-    color: #777;
-    margin-bottom: 1rem;
-}
 
-/* Formulario */
+/* Formulario y Validaciones Visuales */
 .form-control {
+    background-color: var(--bg-tarjetas);
+    color: var(--texto-principal);
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--borde-tarjetas);
     padding: 12px;
     transition: all 0.3s ease;
 }
 .form-control:focus {
+    background-color: var(--bg-tarjetas);
+    color: var(--texto-principal);
     border-color: var(--lila-principal);
     box-shadow: 0 0 0 0.2rem rgba(200, 162, 200, 0.25);
-    transform: translateY(-2px);
+}
+
+/* Bootstrap sobrescrituras para validación inline */
+.form-control.is-invalid {
+    border-color: #dc3545 !important;
+    background-image: none !important;
+}
+.form-control.is-valid {
+    border-color: #198754 !important;
+    background-image: none !important;
+}
+.invalid-feedback, .valid-feedback {
+    font-size: 0.85em;
+    position: absolute; /* Para que quede prolijo justo abajo del campo */
 }
 
 footer {
-    background-color: #fff;
     padding: 3rem 0;
-    border-top: 1px solid var(--lila-claro);
+    border-top: 1px solid var(--borde-tarjetas);
 }
 
 html {
