@@ -1,44 +1,44 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Actualizar año automático en el Footer
+    // 1. Actualizar el año del copyright automáticamente
     const spanYear = document.getElementById("year");
     if (spanYear) {
         spanYear.textContent = new Date().getFullYear();
     }
 
-    // 2. Validación del Formulario de Contacto
+    // 2. Validación del formulario de contacto
     const formulario = document.getElementById("formularioContacto");
     
     if (formulario) {
         formulario.addEventListener("submit", function(evento) {
-            // Prevenimos que la página recargue al instante
-            evento.preventDefault(); 
+            evento.preventDefault(); // Evita que la página recargue inmediatamente
             
-            // Capturamos los valores de los inputs
+            // Obtenemos los valores ingresados y les quitamos los espacios en blanco al inicio y final
             const nombre = document.getElementById("nombre").value.trim();
             const correo = document.getElementById("correo").value.trim();
             const mensaje = document.getElementById("mensaje").value.trim();
 
-            // Expresión regular básica para validar el formato del correo
-            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // Expresión regular para verificar si el correo está bien escrito (tiene @ y un dominio)
+            const formatoCorreoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            // Validación 1: Campos vacíos
+            // Verificación 1: Que ningún campo esté vacío
             if (nombre === "" || correo === "" || mensaje === "") {
-                alert("Por favor, completa todos los campos antes de enviar el mensaje.");
-                return; // Corta la ejecución aquí si falta algo
+                alert("Error: Por favor, completá todos los campos del formulario antes de enviar.");
+                return; // Detiene la ejecución aquí
             }
 
-            // Validación 2: Formato de correo incorrecto
-            if (!regexCorreo.test(correo)) {
-                alert("El correo electrónico ingresado no tiene un formato válido (ejemplo@correo.com).");
-                return;
+            // Verificación 2: Que el correo tenga el formato correcto
+            if (!formatoCorreoValido.test(correo)) {
+                alert("Error: El correo ingresado no es válido. Asegurate de que tenga el formato correcto (ejemplo@correo.com).");
+                return; // Detiene la ejecución aquí
             }
 
-            // Si pasa todas las validaciones (Todo correcto)
-            alert(" ¡Mensaje validado y enviado con éxito!\n\nGracias por escribirme, " + nombre + ". Me pondré en contacto pronto.");
+            // Si pasó todas las validaciones exitosamente:
+            alert("¡Mensaje enviado con éxito!\n\nGracias por escribirme, " + nombre + ". Pronto me pondré en contacto.");
             
-            // Limpia los campos para dejar el formulario en blanco nuevamente
+            // Limpiamos los campos del formulario
             formulario.reset();
         });
     }
+
 });
