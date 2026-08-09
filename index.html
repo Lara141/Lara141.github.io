@@ -70,30 +70,27 @@
     <section id="sobre-mi" class="section seccion-gris">
         <div class="container">
             <h2 class="section-title mb-5 text-center texto-titulos">Sobre Mí</h2>
-            <div class="row align-items-center">
-                <div class="bg-primary-subtle text-dark p-3">
-                <p>
-              Soy estudiante avanzado de la Licenciatura en Sistemas de
-              Información, con particular interés en el desarrollo backend
-              y en el diseño de bases de datos eficientes. Me formé
-              trabajando con lenguajes como PHP y C#, y disfruto especialmente
-              el momento en el que una arquitectura desordenada se convierte
-              en un sistema claro y mantenible.
-             </p>
-             <p>
-              Fuera del código, me interesa entender cómo piensan los
-              equipos de trabajo y cómo la tecnología puede simplificar
-              procesos cotidianos. Busco oportunidades donde pueda seguir
-              aprendiendo, aportar con criterio y crecer junto a un equipo
-              que valore tanto la calidad técnica como la comunicación.
-             </p>
-             </div>
-                <div class="col-md-5">
-                    <ul class="list-group list-group-flush info-lista shadow-sm tarjeta-fondo">
-                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-map-marker-alt texto-destacado me-2"></i> <strong>Ubicación:</strong> Corrientes Capital, Argentina</li>
-                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-graduation-cap texto-destacado me-2"></i> <strong>Carrera:</strong> Lic. en Sistemas de Información (En curso)</li>
-                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-language texto-destacado me-2"></i> <strong>Idiomas:</strong> Español  - Inglés (Básico)</li>
-                        <li class="list-group-item bg-transparent texto-normal"><i class="fas fa-calendar-alt texto-destacado me-2"></i> <strong>Fecha de nacimiento:</strong> 14/10/2004</li>
+            
+            <!-- Contenedor CSS Grid -->
+            <div class="sobre-mi-grid">
+                
+                <!-- Lado Izquierdo: Descripción con fondo Lila -->
+                <div class="sobre-mi-lila">
+                    <p class="texto-titulos">
+                        Soy estudiante avanzada de la Licenciatura en Sistemas de Información, con particular interés en el desarrollo backend y en el diseño de bases de datos eficientes. Me formé trabajando con lenguajes como PHP y C#, y disfruto especialmente el momento en el que una arquitectura desordenada se convierte en un sistema claro y mantenible.
+                    </p>
+                    <p class="mb-0 texto-titulos">
+                        Fuera del código, me interesa entender cómo piensan los equipos de trabajo y cómo la tecnología puede simplificar procesos cotidianos. Busco oportunidades donde pueda seguir aprendiendo, aportar con criterio y crecer junto a un equipo que valore tanto la calidad técnica como la comunicación.
+                    </p>
+                </div>
+
+                <!-- Lado Derecho: Datos Personales -->
+                <div class="sobre-mi-datos">
+                    <ul class="list-group list-group-flush info-lista shadow-sm tarjeta-fondo w-100">
+                        <li class="list-group-item bg-transparent texto-normal p-3"><i class="fas fa-map-marker-alt texto-destacado me-3"></i> <strong>Ubicación:</strong> Corrientes Capital, Argentina</li>
+                        <li class="list-group-item bg-transparent texto-normal p-3"><i class="fas fa-graduation-cap texto-destacado me-3"></i> <strong>Carrera:</strong> Lic. en Sistemas de Información (En curso)</li>
+                        <li class="list-group-item bg-transparent texto-normal p-3"><i class="fas fa-language texto-destacado me-3"></i> <strong>Idiomas:</strong> Español - Inglés (Básico)</li>
+                        <li class="list-group-item bg-transparent texto-normal p-3"><i class="fas fa-calendar-alt texto-destacado me-3"></i> <strong>Fecha de nacimiento:</strong> 14/10/2004</li>
                     </ul>
                 </div>
             </div>
@@ -253,18 +250,27 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="seccion-gris">
-        <div class="container">
-        
-          <ul class="footer__social">
-           <li><a href="https://github.com/Lara141" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
-           <li><a href="mailto:tunombre@email.com" aria-label="Email">Email</a></li>
-          </ul>  
-           <p class="footer__copy">&copy; <span id="year"></span> Acosta Lara. Todos los derechos reservados.</p>
-      </div>
+<!-- Footer Moderno -->
+    <footer class="modern-footer seccion-gris">
+        <div class="container text-center">
+            
+            <!-- Redes Sociales alineadas con Flexbox -->
+            <div class="footer-social-links mb-4">
+                <a href="https://github.com/Lara141" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:tunombre@email.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Derechos de autor -->
+            <p class="footer-copy mb-1 texto-normal">&copy; <span id="year"></span> Acosta Lara. Todos los derechos reservados.</p>
+            <p class="mb-0" style="font-size: 0.85rem; color: var(--lila-oscuro);">Diseñado y desarrollado con dedicación.</p>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->

@@ -275,3 +275,90 @@ html {
     transform: scale(1.05) translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+
+/* =========================================
+   NUEVOS ESTILOS: SOBRE MÍ (CSS GRID)
+========================================= */
+
+.sobre-mi-grid {
+    display: grid;
+    /* Divide la sección en 2 columnas iguales por defecto */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch; /* Asegura que ambas columnas tengan la misma altura */
+}
+
+.sobre-mi-lila {
+    background-color: var(--lila-claro);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    /* Flexbox interno para centrar el texto verticalmente si es necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.sobre-mi-lila:hover {
+    transform: translateY(-3px);
+}
+
+.sobre-mi-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-mi-datos .info-lista {
+    border-radius: 15px;
+}
+
+/* Responsividad: En pantallas menores a 991px (Tablets y Móviles) */
+@media (max-width: 991px) {
+    .sobre-mi-grid {
+        /* Cambia a 1 sola columna. El div lila quedará arriba y los datos abajo */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NUEVOS ESTILOS: FOOTER MODERNO*/
+
+.modern-footer {
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid var(--borde-tarjetas);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* Botones circulares para redes sociales */
+.footer-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-tarjetas);
+    color: var(--texto-principal);
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid var(--borde-tarjetas);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover interactivo en redes (combina con tus botones lila) */
+.footer-social-links a:hover {
+    background-color: var(--lila-principal);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(200, 162, 200, 0.4);
+    border-color: var(--lila-principal);
+}
