@@ -257,3 +257,13 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* Efecto hover para las insignias de habilidades */
+.skill-tags-container img {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+}
+.skill-tags-container img:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
