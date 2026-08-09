@@ -14,7 +14,7 @@
     --borde-tarjetas: #E6E6FA;
     --navbar-bg: rgba(255, 255, 255, 0.95);
 
-    --bg-morado: #bb5af3;
+    --bg-morado: #cb7df8;
 }
 
 /* Variables para Modo Oscuro */
@@ -28,7 +28,7 @@
     --navbar-bg: rgba(18, 18, 18, 0.95);
     --lila-claro: #3a2b3a; /* Ajuste sutil del lila para fondo oscuro */
 
-    --bg-morado: #422948;
+    --bg-morado: #3d2843;
 }
 
 /* Estilos Globales */
@@ -158,13 +158,6 @@ section {
     box-shadow: 0 6px 15px rgba(200, 162, 200, 0.4);
 }
 
-/* Lista Sobre Mi 
-.info-lista {
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--borde-tarjetas);
-}
-*/
 /* NUEVAS Tarjetas de Habilidades (Estilo Etiquetas/Tags) */
 .skill-category-card {
     background-color: var(--bg-tarjetas);
@@ -267,10 +260,7 @@ section {
     position: absolute; /* Para que quede prolijo justo abajo del campo */
 }
 
-/*footer {
-    padding: 3rem 0;
-    border-top: 1px solid var(--borde-tarjetas);
-}*/
+
 
 html {
     scroll-behavior: smooth;
