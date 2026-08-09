@@ -219,20 +219,28 @@ section {
     padding: 2rem;
 }
 
+
 /* Formulario y Validaciones Visuales */
 .form-control {
-    background-color: var(--bg-tarjetas);
-    color: var(--texto-principal);
+    background-color: var(--bg-tarjetas) !important;
+    color: var(--texto-principal) !important;
     border-radius: 10px;
     border: 1px solid var(--borde-tarjetas);
     padding: 12px;
     transition: all 0.3s ease;
 }
+
 .form-control:focus {
-    background-color: var(--bg-tarjetas);
-    color: var(--texto-principal);
+    background-color: var(--bg-tarjetas) !important;
+    color: var(--texto-principal) !important;
     border-color: var(--lila-principal);
     box-shadow: 0 0 0 0.2rem rgba(200, 162, 200, 0.25);
+}
+
+/* Darle un color visible al texto de fondo (placeholder) */
+.form-control::placeholder {
+    color: #999999 !important;
+    opacity: 1; /* Necesario para algunos navegadores */
 }
 
 /* Bootstrap sobrescrituras para validación inline */
