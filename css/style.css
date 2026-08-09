@@ -14,7 +14,7 @@
     --borde-tarjetas: #E6E6FA;
     --navbar-bg: rgba(255, 255, 255, 0.95);
 
-    --bg-morado: #E2D4EA;
+    --bg-morado: #bb5af3;
 }
 
 /* Variables para Modo Oscuro */
@@ -28,7 +28,7 @@
     --navbar-bg: rgba(18, 18, 18, 0.95);
     --lila-claro: #3a2b3a; /* Ajuste sutil del lila para fondo oscuro */
 
-    --bg-morado: #261A29;
+    --bg-morado: #422948;
 }
 
 /* Estilos Globales */
