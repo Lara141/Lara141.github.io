@@ -1,13 +1,17 @@
 :root {
     --bs-body-font-family: 'Inter', sans-serif;
-    --pastel-blue: #B9E0F2; 
-    --light-gray: #f8f9fa; 
+    --lilac-main: #D5B8E8; /* Lila pastel suave principal */
+    --lilac-dark: #B990D4; /* Lila para hovers y detalles */
+    --lilac-light: #F0E6F7; /* Lila super claro para fondos/badges */
+    --light-gray: #FCFAFD; /* Blanco roto casi lila para secciones alternas */
+    --text-dark: #2C2C2C;
 }
 
 body {
-    color: #333;
+    color: var(--text-dark);
     line-height: 1.8;
     font-weight: 300;
+    background-color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, .navbar-brand {
@@ -15,33 +19,40 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #1a1a1a;
 }
 
-.texto-destacado {
-    color: var(--pastel-blue) !important;
+section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.bg-light-custom {
+    background-color: var(--light-gray);
+}
+
+.text-lilac {
+    color: var(--lilac-dark) !important;
+}
+.bg-lilac-light {
+    background-color: var(--lilac-light) !important;
 }
 
 /* Navegación */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
 }
 .nav-link {
-    font-weight: 400;
-    transition: color 0.2s ease-in-out;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s ease;
 }
 .nav-link:hover, .nav-link.active {
-    color: var(--pastel-blue) !important;
+    color: var(--lilac-dark) !important;
 }
 
-/* Héroe (Inicio) */
+/* Héroe */
 .hero {
-    background-color: #fff;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }
@@ -51,127 +62,175 @@ section {
 .hero-img-container::after {
     content: '';
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    background-color: var(--pastel-blue);
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: var(--lilac-light);
     border-radius: 50%;
     z-index: 1;
-    opacity: 0.5;
 }
 .hero-img-container img {
     position: relative;
     z-index: 2;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 10px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 8px solid #fff;
+    transition: transform 0.4s ease;
 }
 
-/* Botones */
-.btn-pastel-primary {
-    background-color: var(--pastel-blue);
-    color: #333;
+/* Botones interactivos */
+.btn-lilac-primary {
+    background-color: var(--lilac-main);
+    color: #fff;
     border: none;
     font-weight: 600;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 50px;
-    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(213, 184, 232, 0.4);
+    transition: all 0.3s ease;
 }
-.btn-pastel-primary:hover {
-    background-color: #a0d1e8;
-    transform: translateY(-2px);
+.btn-lilac-primary:hover {
+    background-color: var(--lilac-dark);
+    color: #fff;
 }
 
-.btn-pastel-outline {
+.btn-lilac-outline {
     background-color: transparent;
-    color: #333;
-    border: 2px solid var(--pastel-blue);
+    color: var(--text-dark);
+    border: 2px solid var(--lilac-main);
     font-weight: 600;
-    padding: 8px 23px;
+    padding: 10px 28px;
     border-radius: 50px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
-.btn-pastel-outline:hover {
-    background-color: var(--pastel-blue);
-    color: #333;
-}
-
-/* Fondos grises */
-#sobre-mi, #contacto {
-    background-color: var(--light-gray);
+.btn-lilac-outline:hover {
+    background-color: var(--lilac-main);
+    color: #fff;
+    border-color: var(--lilac-main);
 }
 
-/* Tarjetas Habilidades */
-.skill-card {
-    background: #fff;
-    border: none;
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    height: 100%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out;
+/* Utilidades interactivas / Animaciones */
+.hover-scale { transition: transform 0.2s ease; }
+.hover-scale:hover { transform: scale(1.05); }
+
+.hover-rotate:hover { transform: rotate(3deg) scale(1.02); }
+
+.hover-lift { transition: transform 0.2s ease; }
+.hover-lift:hover { transform: translateY(-3px); }
+
+/* Cajas e Iconos Sobre Mi */
+.icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: var(--lilac-light);
+    color: var(--lilac-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
-.skill-card:hover {
+.interactive-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.interactive-card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05) !important;
     transform: translateY(-5px);
 }
-.skill-icon {
-    font-size: 3rem;
-    color: var(--pastel-blue);
-    margin-bottom: 1.5rem;
+
+/* Habilidades */
+.skill-category-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(213, 184, 232, 0.2);
 }
-.skill-title {
+.skill-category-card:hover {
+    box-shadow: 0 10px 30px rgba(213, 184, 232, 0.15);
+    transform: translateY(-5px);
+}
+.skill-item {
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.skill-item:hover {
+    background-color: var(--lilac-light);
+    color: var(--lilac-dark);
 }
 
-/* Tarjetas Proyectos */
+/* Proyectos (Tarjetas y Carrusel) */
 .project-card {
     background: #fff;
-    border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     height: 100%;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(213, 184, 232, 0.2);
 }
-.project-card img {
-    width: 100%;
-    height: 200px;
+.project-card .carousel-item img {
     object-fit: cover;
+    height: 250px; 
 }
 .project-card-body {
-    padding: 2rem;
-}
-.project-tech {
-    font-size: 0.8rem;
-    color: #777;
-    margin-bottom: 1rem;
+    padding: 2.5rem;
 }
 
 /* Formulario */
 .form-control {
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 14px;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
 }
 .form-control:focus {
-    border-color: var(--pastel-blue);
-    box-shadow: 0 0 0 0.2rem rgba(185, 224, 242, 0.25);
+    background-color: #fff;
+    border-color: var(--lilac-main);
+    box-shadow: 0 0 0 0.25rem rgba(213, 184, 232, 0.25);
 }
 
-footer {
-    background-color: #fff;
-    padding: 3rem 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
+/* Redes Sociales */
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--lilac-light);
+    color: var(--lilac-dark);
+    border-radius: 50%;
+    margin: 0 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
+.social-icon:hover {
+    background-color: var(--lilac-main);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Animaciones Keyframes de entrada */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+.animate-slide-up { animation: slideUp 0.8s ease forwards; }
+.animate-scale-in { animation: scaleIn 0.8s ease forwards; }
 
 html {
     scroll-behavior: smooth;

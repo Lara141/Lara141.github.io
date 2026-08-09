@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Personal | [Tu Nombre]</title>
+    <title>Portafolio Personal</title>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap 5.3 CSS CDN -->
+    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- FontAwesome para iconos -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- TU ARCHIVO CSS PERSONALIZADO (Debe estar en la carpeta css) -->
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-offset="70">
 
-    <!-- Barra de Navegación -->
-    <nav id="navbarMain" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <!-- Navegación -->
+    <nav id="navbarMain" class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#inicio">[Tu Nombre]</a>
+            <a class="navbar-brand animate-fade-in" href="#inicio">Portafolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,67 +40,68 @@
         </div>
     </nav>
 
-    <!-- Sección Inicio -->
+    <!-- Inicio -->
     <header id="inicio" class="hero section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-7 text-center text-md-start">
-                    <h1 class="display-3 mb-3">Hola, soy<br><span class="text-primary texto-destacado">[Tu Nombre]</span></h1>
-                    <p class="lead mb-4">Estudiante de Licenciatura en Sistemas de Información</p>
-                    <p class="mb-5">Enfocada en el desarrollo de software y el diseño de bases de datos.</p>
-                    <div class="d-grid d-md-flex justify-content-md-start gap-3">
-                        <a href="#proyectos" class="btn btn-pastel-primary btn-lg">Ver Proyectos</a>
-                        <a href="#contacto" class="btn btn-pastel-outline btn-lg">Contactar</a>
+                <div class="col-md-7 text-center text-md-start animate-slide-up">
+                    <h1 class="display-3 mb-3 fw-bold">Bienvenido a mi portafolio</h1>
+                    <p class="lead mb-4 text-muted">Desarrolladora apasionada por el código limpio y la arquitectura de software.</p>
+                    <div class="d-grid d-md-flex justify-content-md-start gap-3 mt-4">
+                        <a href="#proyectos" class="btn btn-lilac-primary btn-lg hover-scale">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-lilac-outline btn-lg hover-scale">Contactar</a>
                     </div>
                 </div>
-                <div class="col-md-5 d-flex justify-content-center hero-img-container mt-5 mt-md-0">
-                    <img src="https://via.placeholder.com/300" alt="Foto de perfil" class="rounded-circle">
+                <div class="col-md-5 d-flex justify-content-center hero-img-container mt-5 mt-md-0 animate-scale-in">
+                    <!-- Cambia este src por tu foto real -->
+                    <img src="https://via.placeholder.com/350x350/E0BBE4/ffffff?text=Tu+Foto" alt="Foto de perfil" class="rounded-circle shadow-lg hover-rotate">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="section">
-        <div class="container text-center">
-            <h2 class="section-title mb-5">Sobre Mí</h2>
-            <div class="col-md-8 offset-md-2">
-                <p class="lead">Me apasiona resolver problemas lógicos y estructurar información. Disfruto trabajando tanto en el código del servidor como en el diseño de arquitecturas eficientes.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section id="habilidades" class="section">
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="section bg-light-custom">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Habilidades</h2>
+            <div class="text-center mb-5 animate-slide-up">
+                <h2 class="section-title">Sobre Mí</h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-php"></i><h4 class="skill-title">PHP</h4></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fas fa-hashtag"></i><h4 class="skill-title">C#</h4></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fas fa-database"></i><h4 class="skill-title">SQL Server</h4></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-github"></i><h4 class="skill-title">Git/GitHub</h4></div></div>
-                <div class="col"><div class="skill-card"><i class="skill-icon fab fa-bootstrap"></i><h4 class="skill-title">Bootstrap 5</h4></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Proyectos -->
-    <section id="proyectos" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Proyectos</h2>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/400x200" alt="Univia API REST Recursos">
-                        <div class="project-card-body">
-                            <h4 class="card-title mb-3">Univia API REST</h4>
-                            <p class="card-text mb-4 text-muted">Backend para gestionar y distribuir enlaces a recursos académicos mediante respuestas JSON.</p>
-                            <p class="project-tech">Tecnologías: PHP, MySQL, PDO</p>
-                            <a href="#" class="btn btn-pastel-outline" target="_blank">Ver en GitHub</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 bg-white p-5 rounded-4 shadow-sm interactive-card">
+                    <p class="lead text-center mb-4">Me apasiona resolver problemas lógicos y estructurar información, enfocándome en soluciones eficientes y escalables.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center mb-3 hover-lift">
+                                <div class="icon-box me-3"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Ubicación</h6>
+                                    <span class="text-muted">Corrientes Capital, Argentina</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3 hover-lift">
+                                <div class="icon-box me-3"><i class="fas fa-graduation-cap"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Carrera</h6>
+                                    <span class="text-muted">Lic. en Sistemas de Información (En curso)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center mb-3 hover-lift">
+                                <div class="icon-box me-3"><i class="fas fa-language"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Idiomas</h6>
+                                    <span class="text-muted">Español (Nativo) - Inglés (Básico)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3 hover-lift">
+                                <div class="icon-box me-3"><i class="fas fa-birthday-cake"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Edad / Nacimiento</h6>
+                                    <span class="text-muted">21 años - [Tu Fecha]</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +109,140 @@
         </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- Habilidades -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Habilidades</h2>
+            </div>
+            <div class="row g-4">
+                
+                <!-- Frontend -->
+                <div class="col-lg-4">
+                    <div class="skill-category-card">
+                        <h4 class="text-center mb-4"><i class="fas fa-laptop-code text-lilac me-2"></i>Frontend</h4>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="skill-item"><i class="fab fa-html5 me-3"></i> HTML5 & CSS3</div>
+                            <div class="skill-item"><i class="fab fa-bootstrap me-3"></i> Bootstrap 5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-lg-4">
+                    <div class="skill-category-card">
+                        <h4 class="text-center mb-4"><i class="fas fa-server text-lilac me-2"></i>Backend</h4>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="skill-item"><i class="fab fa-php me-3"></i> PHP (PDO / XAMPP)</div>
+                            <div class="skill-item"><i class="fas fa-hashtag me-3"></i> C#</div>
+                            <div class="skill-item"><i class="fas fa-database me-3"></i> SQL Server / MySQL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="col-lg-4">
+                    <div class="skill-category-card">
+                        <h4 class="text-center mb-4"><i class="fas fa-tools text-lilac me-2"></i>Herramientas</h4>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="skill-item"><i class="fab fa-git-alt me-3"></i> Git & GitHub</div>
+                            <div class="skill-item"><i class="fab fa-trello me-3"></i> Trello</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Proyectos</h2>
+            </div>
+            <div class="row g-5 justify-content-center">
+                
+                <!-- Proyecto 1: Univia API -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="project-card">
+                        <!-- Carrusel Proyecto 1 -->
+                        <div id="carouselProy1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselProy1" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#carouselProy1" data-bs-slide-to="1"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/600x350/D5B8E8/ffffff?text=API+Univia+1" class="d-block w-100" alt="Univia 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/600x350/C3A6CB/ffffff?text=API+Univia+2" class="d-block w-100" alt="Univia 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProy1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProy1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="project-card-body">
+                            <h4 class="card-title fw-bold">Univia API REST</h4>
+                            <p class="text-muted mt-2">Backend diseñado para gestionar y distribuir enlaces a recursos académicos. Implementa operaciones CRUD puras orientadas al servicio de datos.</p>
+                            <div class="project-tech mb-4">
+                                <span class="badge bg-lilac-light text-dark">PHP</span>
+                                <span class="badge bg-lilac-light text-dark">MySQL</span>
+                                <span class="badge bg-lilac-light text-dark">PDO</span>
+                            </div>
+                            <a href="#" class="btn btn-lilac-outline w-100 hover-scale">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Simulador -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="project-card">
+                        <!-- Carrusel Proyecto 2 -->
+                        <div id="carouselProy2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselProy2" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#carouselProy2" data-bs-slide-to="1"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/600x350/D5B8E8/ffffff?text=Pub-Sub+1" class="d-block w-100" alt="PubSub 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/600x350/C3A6CB/ffffff?text=Pub-Sub+2" class="d-block w-100" alt="PubSub 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProy2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProy2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+
+                        <div class="project-card-body">
+                            <h4 class="card-title fw-bold">Simulador Notificaciones</h4>
+                            <p class="text-muted mt-2">Implementación del patrón de arquitectura Publicador-Suscriptor para simular alertas de subida de apuntes de profesores a alumnos.</p>
+                            <div class="project-tech mb-4">
+                                <span class="badge bg-lilac-light text-dark">C#</span>
+                                <span class="badge bg-lilac-light text-dark">Ingeniería de Software</span>
+                            </div>
+                            <a href="#" class="btn btn-lilac-outline w-100 hover-scale">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
     <section id="contacto" class="section">
         <div class="container">
             <div class="text-center mb-5">
@@ -116,34 +250,67 @@
             </div>
             <div class="row g-5 align-items-center justify-content-center">
                 <div class="col-lg-5">
-                    <p class="mb-3"><i class="fas fa-envelope text-primary me-2"></i> tu@email.com</p>
-                    <p class="mb-3"><i class="fab fa-linkedin text-primary me-2"></i> <a href="#">LinkedIn</a></p>
-                    <p class="mb-3"><i class="fab fa-github text-primary me-2"></i> <a href="#">GitHub</a></p>
+                    <h3 class="mb-4 fw-bold">¡Trabajemos juntos!</h3>
+                    <p class="mb-4 text-muted">Si te interesa mi perfil para la pasantía o quieres conversar sobre código, no dudes en escribirme.</p>
+                    
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <a href="mailto:tu@email.com" class="text-decoration-none text-dark hover-lift">
+                            <i class="fas fa-envelope text-lilac me-3 fs-5"></i> tu@email.com
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark hover-lift">
+                            <i class="fab fa-linkedin text-lilac me-3 fs-5"></i> LinkedIn
+                        </a>
+                        <a href="#" class="text-decoration-none text-dark hover-lift">
+                            <i class="fab fa-github text-lilac me-3 fs-5"></i> GitHub
+                        </a>
+                    </div>
+
+                    <!-- Botón Descargar CV -->
+                    <a href="archivos/Tu_CV.pdf" download class="btn btn-lilac-primary hover-scale">
+                        <i class="fas fa-download me-2"></i> Descargar CV
+                    </a>
                 </div>
-                <div class="col-lg-5">
-                    <!-- Agregamos un ID al formulario para usarlo en JS -->
-                    <form id="formularioContacto">
-                        <div class="mb-3"><input type="text" class="form-control" placeholder="Tu Nombre" required></div>
-                        <div class="mb-3"><input type="email" class="form-control" placeholder="Tu Email" required></div>
-                        <div class="mb-4"><textarea class="form-control" rows="5" placeholder="Tu Mensaje" required></textarea></div>
-                        <div class="text-end"><button type="submit" class="btn btn-pastel-primary">Enviar Mensaje</button></div>
-                    </form>
+
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                        <form id="formularioContacto" novalidate>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Nombre Completo</label>
+                                <input type="text" id="nombre" class="form-control" placeholder="Ej. Ana García">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Correo Electrónico</label>
+                                <input type="email" id="correo" class="form-control" placeholder="tu@correo.com">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Mensaje</label>
+                                <textarea id="mensaje" class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-lilac-primary w-100 hover-scale">Enviar Mensaje</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="text-center bg-light-custom pt-5 pb-4 border-top mt-5">
         <div class="container">
-            <p class="text-muted mt-3">&copy; <span id="year"></span> [Tu Nombre]. Todos los derechos reservados.</p>
+            <div class="mb-3">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-muted small">&copy; <span id="year"></span> Portafolio. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- TU ARCHIVO JAVASCRIPT PERSONALIZADO (Debe estar en la carpeta js) -->
+    <!-- JS Personalizado -->
     <script src="js/main.js"></script>
 </body>
 </html>
